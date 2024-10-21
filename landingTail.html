@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- AUTOR: RICARDO PAVEL PRESENTACION CASTRO -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./tailwindlanding2.css">
+    <title>Pets Landing</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-lavenders dark:bg-azul-negro dark:text-white  ">
+    <header class="text-gray-600 body-font bg-greens dark:bg-dark-purple font-raleway fixed top-0 left-0 right-0 w-full z-50 ">
+        <div class="px-4 py-2 grid grid-cols-2 md:grid-cols-3 gap-4 w-full items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a class="title-font font-medium text-gray-900">
+                    <img src="./images/catlogo.png" class="w-14 md:w-16" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="hidden md:flex text-white font-bold space-x-6 col-span-2 md:col-span-1">
+                <a class="hover:text-[#594eff] dark:hover:text-pink-300 text-lg" href="#">Home</a>
+                <a class="hover:text-[#594eff] dark:hover:text-pink-300 text-lg" href="#adopt">Adopt Now</a>
+                <a class="hover:text-[#594eff] dark:hover:text-pink-300 text-lg" href="#services">Our Services</a>
+                <a class="hover:text-[#594eff] dark:hover:text-pink-300 text-lg" href="#reviews">Reviews</a>
+                <div>
+
+                </div>
+            </nav>
+
+            <!-- Botón  -->
+            <div class="flex items-center justify-end space-x-4 md:space-x-0">
+                <!-- Botón de registro   -->
+                <button id="btn-darkmode" class=" mx-12 text-2xl text-white border-solid border-2 border=white rounded px-4 py-1">
+                    <i class="fa-solid fa-moon"></i>                    </button>
+                <button class="hidden md:inline-flex items-center bg-indigo-500 text-white font-bold py-2 px-4 hover:bg-[#594eff] text-sm">
+                    Register now
+                </button>
+
+                <!-- boton movil-->
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-greens dark:bg-dark-purple text-white flex flex-col items-center space-y-4 my-2 ">
+            <a class="hover:text-[#594eff] dark:hover:text-pink-300" href="#">Home</a>
+            <a class="hover:text-[#594eff] dark:hover:text-pink-300" href="#adopt">Adopt Now</a>
+            <a class="hover:text-[#594eff] dark:hover:text-pink-300" href="#services">Our Services</a>
+            <a class="hover:text-[#594eff] dark:hover:text-pink-300" href="#reviews">Reviews</a>
+            <button class="bg-indigo-500 text-white font-bold py-2 px-4 hover:bg-[#594eff] text-sm ">
+                Register now
+            </button>
+        </div>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            // Alternar clases para mostrar u ocultar el menú
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('block');
+        });
+    </script>
+
+
+    <section class="flex flex-col justify-center items-center my-28 md:my-32 h-[70vh]" data-aos="fade-down">
+        <div class="w-4/5 lg:w-3/5">
+            <div class="flex flex-col justify-center items-center pt-8">
+                <h1 class="font-merriweather text-center text-2xl pb-4">A smarter pet pharmacy</h1>
+                <p class="font-medium text-center">HUMAN-GREAT QUALITY. WALLET-FRIENDLY PRICES.</p>
+                <button class="py-1 px-2 text-sm text-white font-medium bg-indigos hover:bg-[#594eff] mt-2 mb-2">START
+                    YOUR PLAN</button>
+            </div>
+            <div class="flex flex-row w-full justify-center items-center mt-2">
+                <img src="./images/dog3.png" class="w-1/3 hidden md:block" alt="">
+                <!-- Esta imagen con "hidden" se debe mostrar a partir de pantallas md -->
+                <img src="./images/dog5.png" class="w-1/3" alt="">
+                <img src="./images/cat1.png" class="w-1/3" alt="">
+            </div>
+        </div>
+
+    </section>
+    <section id="adopt" class="flex flex-col justify-center font-bold text-white items-center px-10 pt-12 h-full font-raleway">
+        <h1 class="text-3xl text-black mb-3 dark:text-white">Adopt Now</h1>
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+
+            <div class="flex flex-col md:flex-row justify-center items-center bg-yellow-700 w-full p-5  h-fit" data-aos="zoom-in-up">
+                <div class="flex flex-col items-start">
+                    <h1 class="text-xl">Archie and siblings</h1>
+                    <button class="border text-center border-2 py-2 px-3 mt-3 hover:bg-black hover:bg-opacity-30">
+                        Adopt now
+                    </button>
+                </div>
+                <img src="./imagespets/4.png" class="md:w-2/3 w-4/5 pt-4" alt="">
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center bg-purple-500  p-5 h-fit " data-aos="zoom-in-up">
+                <div class="flex flex-col items-center ">
+                    <h1 class="text-xl">Archie and siblings</h1>
+                    <button class="border border-2 py-2 px-3 mt-3 hover:bg-black hover:bg-opacity-30">
+                        Adopt now
+                    </button>
+                </div>
+                <img src="./imagespets/2.png" class="w-2/3 pt-4" alt="">
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center bg-greens w-full p-5 lg:col-span-1 md:col-span-2 " data-aos="zoom-in-up">
+                <div class="flex flex-col items-center">
+                    <h1 class="text-xl">Archie and siblings</h1>
+                    <button class="border border-2 py-2 px-3 mt-3 hover:bg-black hover:bg-opacity-30">
+                        Adopt now
+                    </button>
+                </div>
+                <img src="./imagespets/3.png" class="w-1/3 md:w-2/3  pt-4" alt="">
+            </div>
+            <div class="lg:col-span-3 md:col-span-2  flex flex-row gap-2 flex-wrap md:flex-nowrap" data-aos="zoom-in-up">
+
+                <div class="flex flex-row justify-center items-center bg-reds w-full p-5 w-1/2 h-fit ">
+                    <div class="flex flex-col items-center w-3/5">
+                        <h1 class="text-2xl">Archie and siblings</h1>
+                        <button class="border border-2 py-2 px-3 mt-3 hover:bg-black hover:bg-opacity-30">
+                            Adopt now
+                        </button>
+                        <img src="./imagespets/paws2.png" class="w-1/2 pt-4  " alt="">
+                    </div>
+                    <img src="./imagespets/1.png" class="w-2/5 pt-4" alt="">
+                </div>
+                <div class="flex flex-row justify-center items-center bg-indigos w-full p-5 w-1/2 h-fit ">
+                    <div class="flex flex-col items-center w-3/5">
+                        <h1 class="text-2xl">Archie and siblings</h1>
+                        <button class="border border-2 py-2 px-3 mt-3 hover:bg-black hover:bg-opacity-30">
+                            Adopt now
+                        </button>
+                        <img src="./imagespets/paws2.png" class="w-1/2 pt-4  " alt="">
+                    </div>
+                    <img src="./imagespets/5.png" class="w-2/5 pt-4" alt="">
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section id="services" class="flex flex-col items-center pt-5 pb-4 px-10 my-5 font-raleway w-full ">
+        <div class="w-full flex items-center justify-center">
+            <h1 class="text-3xl text-black font-bold mb-4 pb-10 dark:text-white">Our Services</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 flex justify-center items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2  gap-2 col-span-2 " data-aos="zoom-in-up">
+                <div class="w-full " data-aos="zoom-in-up">
+                    <div class="flex flex-col justify-center items-center lg:p-6 p-2 ">
+                        <h1 class="font-bold text-2xl">#01</h1>
+                        <p class="text-center p-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, aspernatur at ratione ex iusto debitis?
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full" data-aos="zoom-in-up">
+                    <div class="flex flex-col justify-center items-center lg:p-6 p-2">
+                        <h1 class="font-bold text-2xl">#02</h1>
+                        <p class="text-center p-12">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima harum dolor aliquam expedita id amet.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full" data-aos="zoom-in-up">
+                    <div class="flex flex-col justify-center items-center lg:p-6 p-2">
+                        <h1 class="font-bold text-2xl">#03</h1>
+                        <p class="text-center p-12">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, dolor ut nisi iste error in!</p>
+                    </div>
+                </div>
+                <div class="w-full" data-aos="zoom-in-up">
+                    <div class="flex flex-col justify-center items-center lg:p-6 p-2">
+                        <h1 class="font-bold text-2xl">#04</h1>
+                        <p class="text-center p-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iusto nesciunt dolorum, tenetur distinctio quisquam.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex flex-row   align-center items-center lg:col-span-1 lg:w-4/5 md:col-span-2 md:w-2/3 lg:m-0 md:ml-32 ">
+                <img src="./imagespets/foto1.png" class="w-full" alt="">
+            </div>
+
+        </div>
+    </section>
+    <section id="reviews" class="flex flex-col items-center justify-center px-6 pb-12 w-full font-raleway">
+
+        <div class="w-full flex items-center justify-center mb-10">
+            <h1 class="text-3xl text-black font-bold dark:text-white">Reviews</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 dark:text-white">
+            <div class="w-full  bg-yellow-700 py-6 px-6 mb-2" data-aos="flip-right">
+                <div>
+                    <i class="fa-solid fa-quote-right text-3xl  "></i>
+                    <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt quae aliquid ratione exercitationem, pariatur harum itaque animi saepe aliquam nam beatae nisi natus tenetur ab explicabo mollitia voluptates. Accusamus.</p>
+                </div>
+                <div class="flex flex-row pt-5">
+                    <img src="./imagespets/iconperson.png" class="w-20 px-4" alt="">
+                    <div>
+                        <h1 class="font-bold">Lorem, ipsum.</h1>
+                        <h2>Lorem, ipsum dolor.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-purples py-6 px-6 mb-2" data-aos="flip-right">
+                <div>
+                    <i class="fa-solid fa-quote-right text-3xl"></i>
+                    <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt quae aliquid ratione exercitationem, pariatur harum itaque animi saepe aliquam nam beatae nisi natus tenetur ab explicabo mollitia voluptates. Accusamus.</p>
+                </div>
+                <div class="flex flex-row pt-5">
+                    <img src="./imagespets/iconperson.png" class="w-20 px-4" alt="">
+                    <div>
+                        <h1 class="font-bold">Lorem, ipsum.</h1>
+                        <h2>Lorem, ipsum dolor.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-greens py-6 px-6 mb-2 lg:col-span-1 md:col-span-2" data-aos="flip-right">
+                <div>
+                    <i class="fa-solid fa-quote-right text-3xl"></i>
+                    <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt quae aliquid ratione exercitationem, pariatur harum itaque animi saepe aliquam nam beatae nisi natus tenetur ab explicabo mollitia voluptates. Accusamus.</p>
+                </div>
+                <div class="flex flex-row pt-5">
+                    <img src="./imagespets/iconperson.png" class="w-20 px-4" alt="">
+                    <div>
+                        <h1 class="font-bold">Lorem, ipsum.</h1>
+                        <h2>Lorem, ipsum dolor.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="flex flex-col justify-center items-center bg-greens text-white font-raleway py-4 px-6 dark:bg-dark-purple">
+        <div class="text-2xl p-2 justify-between cursor-pointer">
+            <i class="fa-brands fa-facebook p-3"></i>
+            <i class="fa-brands fa-instagram p-3"></i>
+            <i class="fa-brands fa-tiktok p-3"></i>
+            <i class="fa-solid fa-envelope p-3"></i>
+            <i class="fa-brands fa-instagram p-3"></i>
+        </div>
+        <div class="flex flex-col items-center">
+            <h1>© Copyright 2024</h1>
+            <p class="text-center p-2">ASOCIACIÓN CONEXION, Todos los derechos reservados</p>
+        </div>
+
+        <div id="botones_flotantes hover:animate__pulse">
+            <a href="#" class=" fixed   
+                                md:top-[300px]
+                                md:right-5
+                                top-[200px] 
+                                right-1 
+                                bg-blue-500 
+                                text-white 
+                                rounded-full 
+                                shadow-lg 
+                                bg-blue-600 
+                                hover:bg-blue-700 
+                                transition 
+                                duration-300 
+                                md:px-4
+                                md:py-3
+                                px-2
+                                py-1  
+                                md:text-xl
+                                text-sm   
+                                ">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class=" fixed 
+ 
+                                md:top-[90px]
+                                md:right-5
+                                top-[80px] 
+                                right-1 
+                                bg-blue-500 
+                                text-white 
+                                rounded-full 
+                                shadow-lg  
+                                bg-green-500 
+                                hover:bg-green-700 
+                                transition 
+                                duration-300 
+                                md:px-4
+                                md:py-3
+                                px-2
+                                py-1  
+                                md:text-xl
+                                text-sm        
+                                ">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <div class="fixed 
+                        md:top-[160px]
+                        top-[120px]
+                        right-1
+                        md:right-5
+                        lg:right-5  
+                        text-white 
+                        rounded-full 
+                        shadow-lg   
+                        hover:opacity-80   
+                        transition
+                        duration-300 
+                        bg-gradient-to-r 
+                        from-purple-500 
+                        via-pink-500 
+                        to-yellow-500 
+                        md:px-4
+                        md:py-3
+                        px-2
+                        py-1  
+                        md:text-xl
+                        text-sm   
+                        ">
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <a href="#" class=" fixed 
+                                md:top-[230px]
+                                md:right-5
+                                top-[160px] 
+                                right-1 
+                                text-white 
+                                rounded-full 
+                                bg-gray-950 
+                                hover:bg-gray-800 
+                                transition 
+                                duration-300 
+                                md:px-4
+                                md:py-3
+                                px-2
+                                py-1  
+                                md:text-xl
+                                text-sm           
+                                ">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+
+<script>
+    AOS.init();
+</script>
+<script src="./app.js"></script>
+<script src="./config.js"></script>
+
+</html>
